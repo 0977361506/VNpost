@@ -37,7 +37,7 @@ public interface CustomerSerVice {
 
 	Customer findById1(String id);
 
-	void update(Customer customer);
+	public void update(Customer customer);
   
 	
 

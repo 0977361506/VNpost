@@ -41,18 +41,20 @@ public class BaiViet {
 	public void setTomtat(String tomtat) {
 		this.tomtat = tomtat;
 	}
-	public Date getTime() {
-		return Time;
+	
+	public Date getMe() {
+		return me;
 	}
-	public void setTime(Date time) {
-		Time = time;
+	public void setMe(Date me) {
+		this.me = me;
 	}
+
 	String noidung ;
 	Integer sobaiviet ;
 	Boolean baivietdb ;
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "MM/dd/yyyy")
-	Date Time ;
+	Date me ;
 	@ManyToOne
 	@JoinColumn(name = "maCM")
 	ChuyenMuc chuyenMuc;
@@ -60,7 +62,7 @@ public class BaiViet {
 	@ManyToOne
 	@JoinColumn(name = "maDM")
 	DanhMuc danhmuc;
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany
 	@JoinTable(name = "baivietdaxem",
     joinColumns = @JoinColumn(name = "dm_id"),
     inverseJoinColumns = @JoinColumn(name = "cus_id"))

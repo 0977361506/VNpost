@@ -116,48 +116,20 @@
 
 	.leftds{
 		background:#FFFAD5;
-		width: 240px;
+		width: 260px;
 		height: auto;
 		float:left;
 		padding: 0;
 	}
 	.rightds{
 
-		height: 1000px;
+		height: 800px;
 		width: 800px;
 		height: 300px;
 		float:left;
 		margin-left:60px;
 	}
-	.leftds ul li a.active {
-		text-decoration: none;
-		color: #faa61a;
-	}
-	.leftds ul li a {
-		display: block;
-		padding: 10px 0 10px 19px;
-		border-bottom: 1px dotted #EBC27D;
-		color: #4E4B35;
-		font-family: "Roboto-Medium";
-		font-size: 14px;
-
-	}
-	.leftds ul {
-		border-top: 1px solid #EBC27D;
-		margin: 1px 10px;
-		background: #FFFAD5;
-	}
-	ul, li {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	.header-black {
-		width: 100%;
-		display: block;
-		text-align: center;
-		margin: 10px 0 30px;
-	}
+	
 </style>
 
 </head>
@@ -168,7 +140,7 @@
 			<div class="row">
 				<div class="col col-sm-3 col-left" style="padding-left: 100px;">
 					<span class="glyphicon glyphicon-earphone"></span>
-					<i class="hotline">Đường dây nóng hỗ trợ</i>&nbsp;
+					<i class="hotline">Giới Thiệu</i>&nbsp;
 					<strong class="hotnumber">1900 54 54 81</strong>
 				</div>
 				<div class="col col-sm-9 col-right" style="padding-right: 200px;">
@@ -199,7 +171,7 @@
 		</nav>
 		<div class="row header">
 			<div class="col col-sm-7" style="padding-left: 200px;">
-				<a href="" title="">
+				<a href="/home/index" title="">
 					<img src="/img/vnpost-logo1.png" alt="BUU DIEN VIER NAM">
 				</a>
 			</div>
@@ -289,133 +261,179 @@
 		</div>
 		<!--Danh Muc-->
 		<div class="row danhsachtintuc">
-			<div class="container" style="height: 1200px; ">
+			<div class="container" style="height: 600px; ">
 
 				<div class="leftds" >
-					<div id="left-menu" class="navbar-collapse">
+				<div id="left-menu" class="navbar-collapse" style="padding:0" >
+					<h2>
+						Chuyên mục
+					</h2>
+
+					<ul>
+
+						<li>
+							<a id="dnn_ctr812_View_uc_rptCategory_hplMainCategory_0" href="/vi-vn/bai-viet/nhom/id/355/key/tin-vietnam-post">Tin Vietnam Post</a>
+							<ul id="dnn_ctr812_View_uc_rptCategory_ulSubMenu_0">
+
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_0_hplSubCategory_0" href="/vi-vn/bai-viet/nhom/id/356/key/hoat-dong-nganh">Hoạt động ngành</a>
+								</li>
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_0_hplSubCategory_1" href="/vi-vn/bai-viet/nhom/id/154/key/thuong-mai-dien-tu">Thương mại điện tử</a>
+								</li>
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_0_hplSubCategory_2" href="/vi-vn/bai-viet/nhom/id/357/key/hanh-chinh-cong">Hành chính công</a>
+								</li>
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_0_hplSubCategory_3" href="/vi-vn/bai-viet/nhom/id/151/key/chi-tra-luong-huu-bao-tro-xa-hoi">Chi trả lương hưu, bảo trợ xã hội</a>
+								</li>
+
+
+							</ul>
+						</li>
+
+						<li>
+							<a id="dnn_ctr812_View_uc_rptCategory_hplMainCategory_1" href="/vi-vn/bai-viet/nhom/id/150/key/buu-dien-van-hoa-xa">Bưu điện - Văn hóa xã </a>
+
+						</li>
+
+						<li>
+							<a id="dnn_ctr812_View_uc_rptCategory_hplMainCategory_2" href="/vi-vn/bai-viet/nhom/id/358/key/nguoi-buu-dien">Người bưu điện</a>
+							<ul id="dnn_ctr812_View_uc_rptCategory_ulSubMenu_2">
+
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_2_hplSubCategory_0" href="/vi-vn/bai-viet/nhom/id/143/key/guong-dien-hinh">Gương điển hình</a>
+								</li>
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_2_hplSubCategory_1" href="/vi-vn/bai-viet/nhom/id/142/key/hoat-dong-cong-dong">Hoạt động cộng đồng </a>
+								</li>
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_2_hplSubCategory_2" href="/vi-vn/bai-viet/nhom/id/146/key/viet-thu-upu">Viết thư UPU</a>
+								</li>
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_2_hplSubCategory_3" href="/vi-vn/bai-viet/nhom/id/153/key/tim-hieu-tem-buu-chinh">Tìm hiểu Tem Bưu chính</a>
+								</li>
+
+
+							</ul>
+						</li>
+
+						<li>
+							<a id="dnn_ctr812_View_uc_rptCategory_hplMainCategory_3" href="/vi-vn/bai-viet/nhom/id/359/key/hoat-dong-dang-doan-the">Hoạt động Đảng - Đoàn thể</a>
+							<ul id="dnn_ctr812_View_uc_rptCategory_ulSubMenu_3">
+
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_3_hplSubCategory_0" href="/vi-vn/bai-viet/nhom/id/152/key/cong-tac-dang">Công tác Đảng</a>
+								</li>
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_3_hplSubCategory_1" href="/vi-vn/bai-viet/nhom/id/149/key/cong-doan">Công đoàn</a>
+								</li>
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_3_hplSubCategory_2" href="/vi-vn/bai-viet/nhom/id/360/key/doan-thanh-nien">Đoàn thanh niên</a>
+								</li>
+
+								<li>
+									<a id="dnn_ctr812_View_uc_rptCategory_rptSubCategory_3_hplSubCategory_3" href="/vi-vn/bai-viet/nhom/id/387/key/gop-y-kien-xay-dung-co-che-chinh-sach">Góp ý kiến xây dựng cơ chế - chính sách</a>
+								</li>
+
+
+							</ul>
+						</li>
+
+					</ul>
+
+					<div class="hotline-box">
+						<label>
+							Đường dây nóng hỗ trợ
+						</label>
 						<h2>
-							Chuyên mục
+							1900 54 54 81
 						</h2>
-
-						<ul>
-
-							<li>
-								<a  class="active" href="/vi-vn/bai-viet/nhom/id/355/key/tin-vietnam-post">Tin Vietnam Post</a>
-								<ul id="dnn_ctr813_View_uc_rptCategory_ulSubMenu_0">
-
-
-									<li>
-										<a  href="/vi-vn/bai-viet/nhom/id/356/key/hoat-dong-nganh">Hoạt động ngành</a>
-									</li>
-
-									<li>
-										<a href="/vi-vn/bai-viet/nhom/id/154/key/thuong-mai-dien-tu">Thương mại điện tử</a>
-									</li>
-
-									<li>
-										<a href="/vi-vn/bai-viet/nhom/id/357/key/hanh-chinh-cong">Hành chính công</a>
-									</li>
-
-									<li>
-										<a href="/vi-vn/bai-viet/nhom/id/151/key/chi-tra-luong-huu-bao-tro-xa-hoi">Chi trả lương hưu, bảo trợ xã hội</a>
-									</li>
-
-
-								</ul>
-							</li>
-
-							<li>
-								<a  href="/vi-vn/bai-viet/nhom/id/150/key/buu-dien-van-hoa-xa">Bưu điện - Văn hóa xã </a>
-
-							</li>
-
-							<li>
-								<a  href="/vi-vn/bai-viet/nhom/id/358/key/nguoi-buu-dien">Người bưu điện</a>
-								<ul id="dnn_ctr813_View_uc_rptCategory_ulSubMenu_2">
-
-
-									<li>
-										<a href="/vi-vn/bai-viet/nhom/id/143/key/guong-dien-hinh">Gương điển hình</a>
-									</li>
-
-									<li>
-										<a  href="/vi-vn/bai-viet/nhom/id/142/key/hoat-dong-cong-dong">Hoạt động cộng đồng </a>
-									</li>
-
-									<li>
-										<a href="/vi-vn/bai-viet/nhom/id/146/key/viet-thu-upu">Viết thư UPU</a>
-									</li>
-
-									<li>
-										<a  href="/vi-vn/bai-viet/nhom/id/153/key/tim-hieu-tem-buu-chinh">Tìm hiểu Tem Bưu chính</a>
-									</li>
-
-
-								</ul>
-							</li>
-
-							<li>
-								<a  href="/vi-vn/bai-viet/nhom/id/359/key/hoat-dong-dang-doan-the">Hoạt động Đảng - Đoàn thể</a>
-								<ul id="dnn_ctr813_View_uc_rptCategory_ulSubMenu_3">
-
-
-									<li>
-										<a  href="/vi-vn/bai-viet/nhom/id/152/key/cong-tac-dang">Công tác Đảng</a>
-									</li>
-
-									<li>
-										<a  href="/vi-vn/bai-viet/nhom/id/149/key/cong-doan">Công đoàn</a>
-									</li>
-
-									<li>
-										<a  href="/vi-vn/bai-viet/nhom/id/360/key/doan-thanh-nien">Đoàn thanh niên</a>
-									</li>
-
-									<li>
-										<a  href="/vi-vn/bai-viet/nhom/id/387/key/gop-y-kien-xay-dung-co-che-chinh-sach">Góp ý kiến xây dựng cơ chế - chính sách</a>
-									</li>
-
-
-								</ul>
-							</li>
-
-						</ul>
-
-						<div class="hotline-box">
-							<label>
-								Đường dây nóng hỗ trợ
-							</label>
-							<h2>
-								1900 54 54 81
-							</h2>
-						</div>
 					</div>
+				</div>
 				</div>
 				<div class="rightds">
 					<div class="col-sm-12 header-black ">
-						<h1>Tin tức</h1>
+						<h1 class="text-center">Tin tức</h1>
 						
 					</div>
 					
                  <c:forEach var="b" items="${dsbvtheocm}">
 					<div class="col col-sm-6" >
 						<a  href="/chitiet/${b.id}" style="display: block;">${b.tenBV}</a>
+						
 						<div class ="col-xs-6" style="display:inline; float: left;">
 							<img src="/img/${b.photo}" alt="haylam" style="width:100% ;height: 200px;">
+							
 
 						</div>
 						<div class ="col-xs-6" style="display:inline; float: right">
 							<label class="news-date">
-								15/02/2020 10:43
+								${b.me}
 							</label>
 							<p>
-							${b.noidung}
+							${b.tomtat}
 						    </p>
 						</div>
 					</div>
 					</c:forEach>
+				   
+	             
+				   
+				   
+				     <c:forEach var="bb" items="${bvdm}">
+					<div class="col col-sm-6" >
+						<a  href="/chitiet/${bb.id}" style="display: block;">${bb.tenBV}</a>
+						
+						<div class ="col-xs-6" style="display:inline; float: left;">
+							<img src="/img/${bb.photo}" alt="haylam" style="width:100% ;height: 200px;">
+							
 
+						</div>
+						<div class ="col-xs-6" style="display:inline; float: right">
+							<label class="news-date">
+								${bb.me}
+							</label>
+							<p>
+							${bb.tomtat}
+						    </p>
+						</div>
+					</div>
+					</c:forEach>
+				
+				
+				
+                    <c:forEach var="bbb" items="${sl}">
+					<div class="col col-sm-6" >
+						<a  href="/chitiet/${bbb.id}" style="display: block;">${bbb.tenBV}</a>
+						
+						<div class ="col-xs-6" style="display:inline; float: left;">
+							<img src="/img/${bbb.photo}" alt="haylam" style="width:100% ;height: 200px;">
+							
 
+						</div>
+						<div class ="col-xs-6" style="display:inline; float: right">
+							<label class="news-date">
+								${bbb.me}
+							</label>
+							<p>
+							${bbb.tomtat}
+						    </p>
+						</div>
+					</div>
+					</c:forEach>
+ 
 					
 				</div>
 					
@@ -424,8 +442,23 @@
 		</div>
 
 
-
-
+       <div class="ccc" style="margin-left:500px; ">
+           	<nav >
+			<ul class="pagination">
+				<li><a href="/vi-vn/bai-viet/nhom/id/355/key/tin-vietnam-post/p/1" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+				
+				
+				<li><a href="/baiviet/trang/0" >1</a></li>
+				<li><a href="/baiviet/trang/1">2</a></li>
+				<li><a href="/baiviet/trang/2">3</a></li>
+				
+				
+				
+				<li><a href="/vi-vn/bai-viet/nhom/id/355/key/tin-vietnam-post/p/3" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+			</ul>
+		   </nav>
+   
+       </div>
 
 
 
@@ -564,3 +597,25 @@
 				</div>`
 			</div>
 		</div>
+		
+<script>
+$(function(){
+	  $('ul.pagination li').eq(1).click(function(){
+
+		alert("trang thứ 1" );
+		 
+	  });
+	  $('ul.pagination li').eq(2).click(function(){
+
+			alert("trang thứ 2" );
+			 
+		  });
+		    $('ul.pagination li').eq(3).click(function(){
+
+		alert("trang thứ 3" );
+		 
+	  })
+	});
+
+
+</script>

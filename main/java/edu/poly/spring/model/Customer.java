@@ -2,7 +2,9 @@ package edu.poly.spring.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,9 +16,11 @@ import javax.validation.constraints.NotEmpty;
 
 
 import org.hibernate.validator.constraints.Length;
+import org.springframework.transaction.annotation.Transactional;
 
 @Entity
 @Table(name = "Customer")
+@Transactional
 public class Customer {
    @Id
   
@@ -31,7 +35,7 @@ public class Customer {
    String photo ;
   Boolean activated ;
    Boolean admin ;
-  @ManyToMany(mappedBy = "customer")
+  @ManyToMany(mappedBy = "customer",fetch = FetchType.LAZY)
   List<BaiViet> list;
 
 public String getId() {

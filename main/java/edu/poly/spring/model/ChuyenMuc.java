@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "ChuyenMuc")
 public class ChuyenMuc {
@@ -16,8 +18,10 @@ public class ChuyenMuc {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer maCM ;
 	String tenCM ;
+	@JsonIgnore
 	@OneToMany(mappedBy = "chuyenMuc")
 	List<DanhMuc> listDanhMucs;
+	@JsonIgnore
 	@OneToMany(mappedBy = "chuyenMuc")
 	List<BaiViet> listbaBaiViets;
 

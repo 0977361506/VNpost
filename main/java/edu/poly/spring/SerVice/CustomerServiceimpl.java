@@ -7,11 +7,12 @@ package edu.poly.spring.SerVice;
 import java.util.Optional;
 
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Query;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -95,10 +96,20 @@ public class CustomerServiceimpl implements CustomerSerVice {
 	}
 	
 	@Override
+	
 	public void update(Customer customer) {
 		Session session  = entityManagerFactory.createEntityManager().unwrap(Session.class);
-		session.update(customer);
+		/* String  sqString = "Update Customer c  SET c.password=:pass , fullname=:name where id=:id";
+		 Query query = session.createNativeQuery(sqString);
+		 query.setParameter("pass", customer.getPassword());
+		 query.setParameter("name", customer.getFullname());
+		 query.setParameter("id", id);
+		 int m = query.executeUpdate();
+		 System.out.println("so ket qua la"+m); */
+		session.merge(customer);
+		 
 	}
+	
 	
 
 	

@@ -1,4 +1,5 @@
 <%@ page language="java" pageEncoding="utf-8"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -98,7 +99,7 @@
 			<div class="row">
 				<div class="col col-sm-3 col-left" style="padding-left: 100px;">
 					<span class="glyphicon glyphicon-earphone"></span>
-					<i class="hotline">Đường dây nóng hỗ trợ</i>&nbsp;
+					<i class="hotline">Giới Thiệu</i>&nbsp;
 					<strong class="hotnumber">1900 54 54 81</strong>
 				</div>
 				<div class="col col-sm-9 col-right" style="padding-right: 200px;">
@@ -256,7 +257,7 @@
 			</div>
 		</div>
 
-<div class="row" style="height: 560px;">
+<div class="row" style="height: 560px;   background-image: repeating-linear-gradient(red, yellow 10%, green 20%);" >
 		<div class="container">
 			<div class="panel panel-default hello" style="height: 400px; width: 380px; margin: 40px 400px ; margin-bottom: 100px;">
 				<div class="panel-body" >
@@ -266,6 +267,7 @@
 							<div class="form-group">
 								<label>Ten tai khoan</label>
 								<input  name="id" class="form-control" style="margin-left: 80px; width: 60%;"  value="${idd}">
+								  <form:errors path="id"></form:errors>
 							</div>
 							<div class="form-group">
 								<label>Email</label>

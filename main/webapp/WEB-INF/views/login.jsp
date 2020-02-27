@@ -98,7 +98,7 @@
 			<div class="row">
 				<div class="col col-sm-3 col-left" style="padding-left: 100px;">
 					<span class="glyphicon glyphicon-earphone"></span>
-					<i class="hotline">Đường dây nóng</i>&nbsp;
+					<i class="hotline">Giới Thiệu</i>&nbsp;
 					<strong class="hotnumber">1900 54 54 81</strong>
 				</div>
 				<div class="col col-sm-9 col-right" style="padding-right: 200px;">
@@ -256,7 +256,7 @@
 			</div>
 		</div>
 
-<div class="row" style="height: 560px; background-color: #FFFAD5">
+<div class="row" style="height: 560px; background-color: #FFFAD5;">
 		<div class="container">
 			<div class="panel panel-default hello" style="height: 400px; width: 380px; margin: 40px 400px ; margin-bottom: 100px;">
 				<div class="panel-body" >

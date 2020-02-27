@@ -140,7 +140,7 @@
 			<div class="row">
 				<div class="col col-sm-3 col-left" style="padding-left: 100px;">
 					<span class="glyphicon glyphicon-earphone"></span>
-					<i class="hotline">Đường dây nóng hỗ trợ</i>&nbsp;
+					<i class="hotline">Giới thiệu</i>&nbsp;
 					<strong class="hotnumber">1900 54 54 81</strong>
 				</div>
 				<div class="col col-sm-9 col-right" style="padding-right: 200px;">

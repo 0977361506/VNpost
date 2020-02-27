@@ -32,4 +32,9 @@ public interface BaiVietService {
 	public List<BaiViet> findbydb(Integer id);
 	List<BaiViet> tktheocm(Integer id);
 	public BaiViet tk(Integer id) ;
+	public BaiViet findbyId1(Integer id);
+	  public List<BaiViet> tktheodm(Integer id);
+	  public void update(BaiViet viet);
+	  public int soluong(Integer size);
+	  public List<BaiViet> phantrang(int m , int n);
 }

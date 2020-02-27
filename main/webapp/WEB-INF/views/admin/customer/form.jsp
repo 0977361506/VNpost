@@ -1,6 +1,7 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
+
 <h2>CustomerForm</h2>
 <h2> ${message} ${param.message}</h2>
 <form:form action="/admin/customer/index" modelAttribute="entity" enctype="multipart/form-data">
@@ -8,7 +9,7 @@
 
  <div class="form-group col-sm-6">
   <label>Id</label>
-  <form:input path="id"  class="form-control" />
+  <form:input path="id"  class="form-control"  />
 </div>
 
  <div class="form-group col-sm-6">
@@ -24,6 +25,7 @@
  <div class="form-group col-sm-6">
   <label>password</label>
   <form:input path="password"  class="form-control" />
+    <form:errors path="password"></form:errors>
 </div>
 
  <div class="form-group col-sm-6">

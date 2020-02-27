@@ -122,7 +122,7 @@
 			<div class="row">
 				<div class="col col-sm-3 col-left" style="padding-left: 100px;">
 					<span class="glyphicon glyphicon-earphone"></span>
-					<i class="hotline">Đường dây nóng hỗ trợ</i>&nbsp;
+					<i class="hotline">Giới thiệu</i>&nbsp;
 					<strong class="hotnumber">1900 54 54 81</strong>
 				</div>
 				<div class="col col-sm-9 col-right" style="padding-right: 200px;">
@@ -256,12 +256,34 @@
 						   <li>
 							 <a  href="/chuyenmuc/${p.maCM}">${p.tenCM}</a>
 							 <ul>
-
-                                 <c:forEach var="v" items="${listdm}">
+                               <c:if test="${p.maCM ==1}">
+                                    <c:forEach var="v" items="${listdm}">
 								<li>
 									<a  href="/danhmuc/${v.id}">${v.tenDM}</a>
 								</li>
                                  </c:forEach>
+                               </c:if>
+                                <c:if test="${p.maCM ==2}">
+                                    <c:forEach var="v" items="${listdm2}">
+								<li>
+									<a  href="/danhmuc/${v.id}">${v.tenDM}</a>
+								</li>
+                                 </c:forEach>
+                               </c:if>
+                                <c:if test="${p.maCM ==3}">
+                                    <c:forEach var="v" items="${listdm3}">
+								<li>
+									<a  href="/danhmuc/${v.id}">${v.tenDM}</a>
+								</li>
+                                 </c:forEach>
+                               </c:if>
+                                <c:if test="${p.maCM ==4}">
+                                    <c:forEach var="v" items="${listdm4}">
+								<li>
+									<a  href="/danhmuc/${v.id}">${v.tenDM}</a>
+								</li>
+                                 </c:forEach>
+                               </c:if>
 							</ul>
 						    </li>
                         </c:forEach>
@@ -287,20 +309,20 @@
 						</li>
 						 <c:forEach var="v" items="${listdm}">
 								<li>
-									<a  href="/vi-vn/bai-viet/nhom/id/356/key/hoat-dong-nganh">${v.tenDM}</a>
+									<a  href="#">${v.tenDM}</a>
 								</li>
                                  </c:forEach>
 					</ul>
 				</div>
 				<div class="row">
 					<div class="col-sm-4" style="border-right-style:solid; border-width:thin ; height: 400px;">
-					 <c:forEach var="v" items="${listbv}">
+					
 						<h2 style="display: block; font-size:medium;">
-							<a href="/chitiet/${v.id}">Tăng cường phối hợp truyền thông, phát triển người tham gia BHXH tự nguyện, BHYT hộ gia đình</a>
+							<a href="/chitiet/${bvdb.id}">Tăng cường phối hợp truyền thông, phát triển người tham gia BHXH tự nguyện, BHYT hộ gia đình</a>
 						</h2>
-						<img src="/img/${v.photo}" alt="" style="height: 230px; width:240px; ">
-						<p>${v.tenBV}</p>
-						</c:forEach>
+						<img src="/img/${bvdb.photo}" alt="" style="height: 230px; width:240px; ">
+						<p>${bvdb.tenBV}</p>
+						
 					</div>
 					<div class="col col-sm-4" style="display: block;border-right-style:solid; border-width:thin ;  height: 400px;">
 						<ul class="vincom">
@@ -327,12 +349,8 @@
 						<div >
 							<img src="/img/Thi dua 2020.jpg" alt="" style="height: 200px; width:210px; ">
 							<h2 style="display: block; font-size:medium;">
-								<a href="/vi-vn/bai-viet/chi-tiet/id/83537/key/xay-dung-van-hoa-doanh-nghiep-yeu-to-quyet-dinh-su-truong-ton-cua-doanh-nghiep" id="dnn_ctr686_View_uc_rptMainCategory_linkItemMostView_0" class="new-default-tile"><p style="text-align:center;">
-									Text in a pre element
-									is displayed in a fixed-width
-									font, and it preserves
-									both spaces and
-									line breaks.
+								<a href="#" id="dnn_ctr686_View_uc_rptMainCategory_linkItemMostView_0" class="new-default-tile"><p style="text-align:center;">
+								Xây dựng văn hóa doanh nghiệp - Yếu tố quyết định sự trường tồn của doanh nghiệp
 								</p></a>
 							</h2>
 						</div>
@@ -344,49 +362,49 @@
 				<div class="tieude" style="display: block; border: none;">
 					<ul class="nav">
 						<li class="nav-item">
-							<a class="nav-link" href="#">Tin Vietnam Post</a>
+							<a class="nav-link" href="#">Bưu Điện Văn Hóa</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Hoạt động nghành</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Thương mại điện tử</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link " href="#">Chi trả lương hưu, bảo vệ xã hội</a>
-						</li>
+						
 					</ul>
 				</div>
 				<div class="row">
 					<div class="col-sm-4" style="border-right-style:solid; border-width:thin ; height: 400px;">
 						<h2 style="display: block; font-size:medium;">
-							<a href="">Tăng cường phối hợp truyền thông, phát triển người tham gia BHXH tự nguyện, BHYT hộ gia đình</a>
+							<a href="/chitiet/${bvdb1.id}">${bvdb1.tenBV}</a>
 						</h2>
-						<img src="/img/Thi dua 2020.jpg" alt="" style="height: 230px; width:240px; ">
-						<p>Vừa qua, BHXH tỉnh Quảng Bình phối hợp với Bưu điện tỉnh tổ chức Hội nghị Phát triển người tham gia BHXH tự nguyện, BHYT hộ gia đình năm 2020 và ký kết chương trình phối hợp năm...</p>
+						<img src="/img/${bvdb1.photo}" alt="" style="height: 230px; width:240px; ">
+						<p>${bvdb1.tenBV}</p>
 					</div>
 					<div class="col col-sm-4" style="display: block;border-right-style:solid; border-width:thin ;  height: 400px;">
 						<ul class="vincom">
-                             <c:forEach var="mmm" items="${listt}">
-							<li class="vi">
-								<a href="/chitiet/${mmm.id}" class="new-default-tile">${mmm.tenBV}</a>
-							</li >
-                              </c:forEach>
+                          <ul class="vincom">
 
+							<li class="vi">
+								<a href="#">Nâng cao hiệu quả hoạt động của Bưu điện Văn hóa xã</a>
+							</li >
+
+							<li class="vi">
+								<a href="#">Hải Dương: Mô hình Bưu điện Văn hóa xã cung cấp dịch vụ hành chính công</a>
+							</li>
+
+							<li class="vi">
+								<a href="#"" id="dnn_ctr686_View_uc_rptMainCategory_rptNextArticle_0_linkArticle_2" class="new-default-tile">Quảng Nam: Sơ kết công tác triển khai thực hiện Đề án Phát triển hệ thống Bưu điện Văn hoá xã</a>
+							</li>
+
+							<li class="vi">
+								<a href="#" class="new-default-tile">Chấp nhận vận chuyển ra nước ngoài trang thiết bị y tế phòng, chống dịch nCoV vì mục đích nhân đạo</a>
+							</li>
+
+						</ul>
 						</ul>
 					</div>
 					<div class=" col-sm-4" style=" height: 300px;">
 						<div >
-							<img src="/img/Thi dua 2020.jpg" alt="" style="height: 200px; width:210px; ">
 							<h2 style="display: block; font-size:medium;">
-								<a href="/vi-vn/bai-viet/chi-tiet/id/83537/key/xay-dung-van-hoa-doanh-nghiep-yeu-to-quyet-dinh-su-truong-ton-cua-doanh-nghiep" id="dnn_ctr686_View_uc_rptMainCategory_linkItemMostView_0" class="new-default-tile"><p style="text-align:center;">
-									Text in a pre element
-									is displayed in a fixed-width
-									font, and it preserves
-									both spaces and
-									line breaks.
-								</p></a>
-							</h2>
+							<a href="/chitiet/${bvdb2.id}">${bvdb2.tenBV}</a>
+						</h2>
+						<img src="/img/${bvdb2.photo}" alt="" style="height: 230px; width:240px; ">
+						<p>${bvdb2.tenBV}</p>
 						</div>
 					</div>
 
@@ -396,23 +414,21 @@
 				<div class="tieude" style="display: block; padding: 0;">
 					<ul class="nav">
 						<li class="nav-item">
-							<a class="nav-link" href="#">Tin Vietnam Post</a>
+							<a class="nav-link" href="#">Người Bưu Điện</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Hoạt động nghành</a>
+							<a class="nav-link" href="#">Gương Điển Hình</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Thương mại điện tử</a>
+							<a class="nav-link" href="#">Viết Thư UPU</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link " href="#">Chi trả lương hưu, bảo vệ xã hội</a>
-						</li>
+						
 					</ul>
 				</div>
 				<div class="row">
 					<div class="col-sm-4" style="border-right-style:solid; border-width:thin ; height: 400px;">
 						<h2 style="display: block; font-size:medium;">
-							<a href="">Tăng cường phối hợp truyền thông, phát triển người tham gia BHXH tự nguyện, BHYT hộ gia đình</a>
+							<a href="#">Tăng cường phối hợp truyền thông, phát triển người tham gia BHXH tự nguyện, BHYT hộ gia đình</a>
 						</h2>
 						<img src="/img/Thi dua 2020.jpg" alt="" style="height: 230px; width:240px; ">
 						<p>Vừa qua, BHXH tỉnh Quảng Bình phối hợp với Bưu điện tỉnh tổ chức Hội nghị Phát triển người tham gia BHXH tự nguyện, BHYT hộ gia đình năm 2020 và ký kết chương trình phối hợp năm...</p>
@@ -421,33 +437,27 @@
 						<ul class="vincom">
 
 							<li class="vi">
-								<a href="/vi-vn/bai-viet/chi-tiet/id/92082/key/tp-bien-hoa-dan-dau-ve-cai-cach-thu-tuc-hanh-chinh" id="dnn_ctr686_View_uc_rptMainCategory_rptNextArticle_0_linkArticle_0" class="new-default-tile">TP.Biên Hòa: Dẫn đầu về cải cách thủ tục hành chính</a>
+								<a href="#" id="dnn_ctr686_View_uc_rptMainCategory_rptNextArticle_0_linkArticle_0" class="new-default-tile">Thừa Thiên Huế: giảm 50% phí nhận hồ sơ và chuyển trả kết quả giải quyết thủ tục hành chính</a>
 							</li >
 
 							<li class="vi">
-								<a href="/vi-vn/bai-viet/chi-tiet/id/92078/key/covid-19-tac-dong-rat-manh-toi-dich-vu-buu-chinh-toan-cau" id="dnn_ctr686_View_uc_rptMainCategory_rptNextArticle_0_linkArticle_1" class="new-default-tile">Covid-19 tác động rất mạnh tới dịch vụ bưu chính toàn cầu</a>
+								<a href="#" id="dnn_ctr686_View_uc_rptMainCategory_rptNextArticle_0_linkArticle_1" class="new-default-tile">Bưu điện Việt Nam tham gia tuyên truyền, hỗ trợ phòng chống dịch do chủng mới của virus Corona</a>
 							</li>
 
 							<li class="vi">
-								<a href="/vi-vn/bai-viet/chi-tiet/id/92077/key/vi-pham-giao-thong-ngoi-nha-nop-phat" id="dnn_ctr686_View_uc_rptMainCategory_rptNextArticle_0_linkArticle_2" class="new-default-tile">Vi phạm giao thông, ngồi nhà nộp phạt</a>
+								<a href="#" id="dnn_ctr686_View_uc_rptMainCategory_rptNextArticle_0_linkArticle_2" class="new-default-tile">Vi phạm giao thông, ngồi nhà nộp phạt</a>
 							</li>
 
-							<li class="vi">
-								<a href="/vi-vn/bai-viet/chi-tiet/id/92065/key/chap-nhan-van-chuyen-ra-nuoc-ngoai-trang-thiet-bi-y-te-phong-chong-dich-ncov-vi-muc-dich-nhan-dao" id="dnn_ctr686_View_uc_rptMainCategory_rptNextArticle_0_linkArticle_3" class="new-default-tile">Chấp nhận vận chuyển ra nước ngoài trang thiết bị y tế phòng, chống dịch nCoV vì mục đích nhân đạo</a>
-							</li>
+							
 
 						</ul>
 					</div>
 					<div class=" col-sm-4" style=" height: 300px;">
 						<div >
-							<img src="/img/Thi dua 2020.jpg" alt="" style="height: 200px; width:210px; ">
+							<img src="/img/anh3.jpg" alt="" style="height: 200px; width:210px; ">
 							<h2 style="display: block; font-size:medium;">
 								<a href="/vi-vn/bai-viet/chi-tiet/id/83537/key/xay-dung-van-hoa-doanh-nghiep-yeu-to-quyet-dinh-su-truong-ton-cua-doanh-nghiep" id="dnn_ctr686_View_uc_rptMainCategory_linkItemMostView_0" class="new-default-tile"><p style="text-align:center;">
-									Text in a pre element
-									is displayed in a fixed-width
-									font, and it preserves
-									both spaces and
-									line breaks.
+									Tóm tắt nội dung Hiến pháp và những điểm mới trong Điều 10 Hiến pháp năm 2013
 								</p></a>
 							</h2>
 						</div>
