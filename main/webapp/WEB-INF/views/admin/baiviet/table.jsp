@@ -59,32 +59,36 @@
 		  url:"/baiviet/phantrang/soluong",
 		  success:function(response){
 			  pagecount=response;
+			  alert("so luong "+pagecount);
 		  }
 	  })
 	  
 	  $(".pager a:eq(0)").click(function(){
 		  pageno=0;
-		 
+		
 		  $.ajax({
 			  url:"/baiviet/phantrang/trang/"+pageno,
 			  success:function(response){
 				if(response){
 			        alert("happy");
-					window.location.href="http://localhost:8888/home/index";
+				//	window.location.href="http://localhost:8888/home/index";
 			  }
-		   })
+		  
 		
-	  });
-	  });
+	  
+		  });
+		  })
+	  })
+	  
 	  
 	  $(".pager a:eq(1)").click(function(){
 		  pageno--;
 	  });
 	  $(".pager a:eq(3)").click(function(){
-		  pageno++
+		  pageno++;
 	  });
 	  $(".pager a:eq(4)").click(function(){
 		  pageno=pagecount-1;
 	  });
-  })
+  });
 </script>

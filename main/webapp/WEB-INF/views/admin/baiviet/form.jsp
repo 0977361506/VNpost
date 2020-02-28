@@ -119,6 +119,8 @@
 $(function(){
 
 	CKEDITOR.replace('hieu');
+	var editor = CKEDITOR.replace( 'ckfinder' );
+	CKFinder.setupCKEditor( editor );
 
 });
 

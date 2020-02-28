@@ -27,9 +27,11 @@ public class PhanTrangController {
 		Integer t = baiviet.soluong(2);
 		return new ResponseEntity<Integer>(t, HttpStatus.OK);
 	}
-
-	@RequestMapping("/baiviet/phantrang/trang/{pageno}")
+	
+	
 	@ResponseBody
+	@RequestMapping("/baiviet/phantrang/trang/{pageno}")
+	
 	public Boolean trang(Model model, @PathVariable("pageno") Integer id) {
 		int sz = 2;
 		List<BaiViet> list = baiviet.phantrang(id, sz);

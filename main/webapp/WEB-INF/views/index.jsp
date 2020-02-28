@@ -1098,8 +1098,8 @@ div.vip5 {
 				</ul>
 			</div>
 		</div>
-		<script async
-			src="//static.zotabox.com/e/1/e1c18ea9c2f89f69db43c45a78ca27fa/widgets.js"></script>
+		<div><script async
+			src="//static.zotabox.com/e/1/e1c18ea9c2f89f69db43c45a78ca27fa/widgets.js"></script></div>
 	</div>
 
 
@@ -1113,7 +1113,7 @@ $(function(){
 	  $.ajax({
 		  url:'/home/language?lang='+lang,
 	  success:function(){
-		  alert("Tài liệu học Lập Trình Web"+ lang);
+		  alert("ngoon ngu tieng viet"+ lang);
 		  location.reload();
 	  }
 	  });
