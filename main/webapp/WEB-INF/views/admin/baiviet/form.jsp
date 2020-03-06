@@ -117,11 +117,10 @@
 <script>
 
 $(function(){
-
+	
 	CKEDITOR.replace('hieu');
-	var editor = CKEDITOR.replace( 'ckfinder' );
-	CKFinder.setupCKEditor( editor );
-
+	//var editor = CKEDITOR.replace( 'hieu' );
+	//CKFinder.setupCKEditor( editor, null, { type: 'Files' } );
 });
 
 </script>

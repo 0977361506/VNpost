@@ -32,14 +32,14 @@ public class PhanTrangController {
 	@ResponseBody
 	@RequestMapping("/baiviet/phantrang/trang/{pageno}")
 	
-	public Boolean trang(Model model, @PathVariable("pageno") Integer id) {
+	public List<BaiViet> trang(Model model, @PathVariable("pageno") Integer id) {
 		int sz = 2;
 		List<BaiViet> list = baiviet.phantrang(id, sz);
 		if (list.size() > 0) {
 			model.addAttribute("list1", list);
-			return true;
+			return list;
 		}
 
-		return false;
+		return null;
 	}
 }

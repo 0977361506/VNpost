@@ -124,7 +124,7 @@
 	}
 	.rightds{
 
-		height: 1000px;
+		height: 1500px;
 		width: 800px;
 		height: 300px;
 		float:left;
@@ -399,7 +399,7 @@
 					</div>
 					<div class="icon" >
 						<label class="news-date" >
-							17/02/2020
+							${baiviet.me}
 						</label>
 					</div>
 					<div class="chitiet" >
@@ -413,7 +413,7 @@
 					<div>
 					số lượt xem : ${baiviet.sobaiviet}
 					</div>
-					<div>
+					<div style="margin-top:0;">
 					<h2>
 					Comments</h2></div>
 					<div>

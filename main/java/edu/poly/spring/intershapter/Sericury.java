@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+import edu.poly.spring.EntitiesAdmin.NhanVien;
 import edu.poly.spring.model.Customer;
 
 
@@ -17,7 +18,8 @@ public class Sericury extends HandlerInterceptorAdapter {
 public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 		throws Exception {
 	 HttpSession session = request.getSession();
-	 Customer customer= (Customer) session.getAttribute("user");
+	NhanVien customer= (NhanVien) session.getAttribute("user");
+	
 	 if(customer==null) {
 		 session.setAttribute("url", request.getRequestURI());
 		 response.sendRedirect("/home/login");

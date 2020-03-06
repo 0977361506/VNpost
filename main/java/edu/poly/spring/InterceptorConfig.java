@@ -6,6 +6,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import edu.poly.spring.intershapter.Sericury;
+import edu.poly.spring.intershapter.ShareInterceptor;
 
 
 
@@ -14,13 +15,14 @@ import edu.poly.spring.intershapter.Sericury;
 
 @Configuration
 public class InterceptorConfig implements  WebMvcConfigurer{
-
+  @Autowired
+  ShareInterceptor share;
 
 	@Autowired
 	Sericury sem;
   @Override
 public void addInterceptors(InterceptorRegistry registry) {
-	
-	registry.addInterceptor(sem).addPathPatterns("/admin/customer/index");
+	  registry.addInterceptor(share).addPathPatterns("/**");
+	registry.addInterceptor(sem).addPathPatterns("/quantri/7");
 }
 }

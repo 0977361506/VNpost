@@ -24,7 +24,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import edu.poly.spring.AdminService.NhanVienSer;
+import edu.poly.spring.EntitiesAdmin.NhanVien;
+import edu.poly.spring.EntitiesAdmin.Ungdung;
 import edu.poly.spring.Gmail.mailsend;
 import edu.poly.spring.SerVice.CookieService;
 import edu.poly.spring.SerVice.CustomerSerVice;
@@ -43,6 +47,8 @@ public class LoginController {
 	ServletContext du;
 	@Autowired
 	mailsend ma;
+	@Autowired
+	NhanVienSer nv;
 
 	@RequestMapping("/home/index")
 	public String home() {
@@ -105,33 +111,42 @@ public class LoginController {
 
 	@PostMapping("/login/home")
 	public String login(Model model, @RequestParam("id") String id, @RequestParam("pw") String pw,
-			@RequestParam(value = "rm", defaultValue = "false") boolean rm) {
+			@RequestParam(value = "rm", defaultValue = "false") boolean rm ) {
 
 		if (!id.equals("") && !pw.equals("")) {
-			Customer customer = cus.findById1(id);
-
-			if (customer != null) {
-				if (!customer.getPassword().equals(pw)) {
-					model.addAttribute("mes", "vui long kiem tra  laij password");
-					return "login";
-
-				} else if (customer.getActivated() == false) {
-					model.addAttribute("mes", "vui long kich hoat tai khoan");
-					return "login";
-				} else if (customer.getAdmin() == false) {
-					model.addAttribute("mes", "ban ko phai la admin");
-					return "login";
+			NhanVien customer = nv.findbyName(id);
+            cooki.creat("tai",customer.getTennv(), 90);
+			if(customer!= null) {
+				if(customer==null) {
+					model.addAttribute("error", "tai khoan khong ton taij xin vui long kiem tra lai");
+					
 				}
-
-			} else {
-				model.addAttribute("mes", "kiểm tra lại thông tin đăng nhập");
+				else if(!customer.getPass().equals(pw)) {
+					model.addAttribute("error", "vui long kiem tra  laij password");
+					
+				}
+				else if(customer.getTrangthai()==false) {
+					model.addAttribute("error", "vui long kich hoat tai khoan");
+					
+				}
+				else {
+					model.addAttribute("error", "dagn nhap thanh cong");
+					session.setAttribute("user", customer);
+					
+					String urlString = (String) session.getAttribute("url");
+					
+					return "redirect:/quantri/7";
+					
+				}
 			}
-			model.addAttribute("entity", customer);
-
+			 
 		}
-
-		return "admin/customer/index";
+		return "login";
+		
 	}
+
+		
+
 	// lay lai mat khau
 
 	@RequestMapping("/login/email")
@@ -156,7 +171,7 @@ public class LoginController {
 						String content = "Lây Lại Thông Tin Mật Khẩu";
 						ma.send(customer.getEmail(), "lethehieu151098@gmail.com", content, subject);
 						model.addAttribute("mes1", "lay lại mật khẩu thành công");
-						return "riderect:/login/email";
+						return "redirect:/login/email";
 					}
 				}
 			}
