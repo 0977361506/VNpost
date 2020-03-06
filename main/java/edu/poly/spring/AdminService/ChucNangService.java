@@ -33,6 +33,6 @@ public interface  ChucNangService {
 	<S extends chucnang> Iterable<S> saveAll(Iterable<S> entities);
 
 	chucnang save(chucnang entity);
-
+	chucnang findbychuc(Integer id);
 
 }

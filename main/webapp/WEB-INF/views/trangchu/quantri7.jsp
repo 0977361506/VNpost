@@ -422,11 +422,11 @@ ${a7.tenCN}
 </ul>
 </div>
 
-
+............................................................................................
 </c:if>
 <c:if test="${kk.id==8}">
 <c:if test="${kk.ok==true}">
-<input type="checkbox" name="" checked>
+<input class="chucvu" type="checkbox" name="" value="${kk.id}" checked>
 </c:if>
 <c:if test="${kk.ok==false}">
 <input type="checkbox" name="" >
@@ -434,11 +434,11 @@ ${a7.tenCN}
 <a href="#e38"  data-toggle="collapse"  title="">${kk.ten}</a>
 
 <div id="e38" class="collapse" data-parent="#accordion" >
-<ul>
+<ul class="vl">
 <c:forEach var="a8" items="${a8}">
-<li>
+<li class="check">
 <c:if test="${a8.ok==true}">
-<input type="checkbox" name="" checked>
+<input type="checkbox" name="" value="${a8.maCN}" checked>
 </c:if>
 <c:if test="${a8.ok==false}">
 <input type="checkbox" name="" >
@@ -468,7 +468,7 @@ ${a8.tenCN}
 <c:if test="${a9.ok==true}">
 <input type="checkbox" name="" checked>
 </c:if>
-<c:if test="${a9.ok==true}">
+<c:if test="${a9.ok==false}">
 <input type="checkbox" name="" >
 </c:if>
 
@@ -641,10 +641,49 @@ ${a14.tenCN}
 </div>
 </div>
 	<!-- The Modal -->
-				
+			
+<script type="text/javascript">
+  $(function(){
+	  $("input.chucvu").click(function(){
+		  var a = $(this).val();
+		  var datacheck =$('li.check input[type=checkbox]:checked').map(function () {
+	          return $(this).val();
+	      }).get();
+		
+		  dataPUT = {};
+		  dataPUT['check'] =datacheck;
+		  dataPUT['ma'] = a;
+		  alert(a);
+		  alert(datacheck);
+		  alert(dataPUT.check);
+		  editGroup(dataPUT);
+		  
+	  });
+	  
+	
+		function editGroup(dataArray){
+		    $.ajax({
+		        url: '/check/edit',
+		   
+		        data: JSON.stringify(dataArray),
+		        dataType: 'json',
+		        contentType: "application/json",
+		        success: function (res) {
+		            window.location.href = "/trangchu/giaodien";
+		        },
+		        error: function(res){
+		        	//  window.location.href = "/admin/grouppermistion/list?message=error_system";
+		        }
+		        
+		    });
+		}
 
 
+		
 
-					<!--thêm mới cán bộ công nhân viên -->
+	  
+	  
+  });
 
+</script>
 

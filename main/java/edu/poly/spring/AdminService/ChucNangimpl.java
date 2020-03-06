@@ -67,6 +67,10 @@ public void deleteAll() {
 	chucnangRes.deleteAll();
 }
 
+public chucnang findbychuc(Integer id) {
+	Session session = entityManagerFactory.createEntityManager().unwrap(Session.class);
+	return session.find(chucnang.class,id);
+}
  public List<chucnang> find(int danhsach){
 	 Session session = entityManagerFactory.createEntityManager().unwrap(Session.class);
 	 String hqlString = "from chucnang c where c.chuc.id=:cid";
